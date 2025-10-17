@@ -5,18 +5,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="estilos/style.css">
 </head>
 
 <body>
-    <h1>Módulos de desarollo de aplicaciones web</h1>
-    <ul>
-        <li>Despliegue de aplicaciones web</li>
-        <li>Diseño de interfaces web</li>
-        <li>Desarrollo entorno cliente</li>
-        <li>Desarrollo entorno servidor</li>
-        <li>Lenguaje de marcas</li>
-        <li>Base de datos</li>
-    </ul>
+    <h1>Ciclo formativo grado superior</h1>
+    <h2> Desarrollo de aplicaciones web</h2>
+    <section>
+        <h3>Modulos de primer curso <strong> Según la ley antigua LOE</strong></h3>
+        <img src="img/primero daw.png" alt="">
+        <ul>
+            <li>Programación</li>
+            <li>Sistemas informáticos</li>
+            <li>Entornos de desarrollo</li>
+            <li>Formación y Orientación Laboral</li>
+            <li>Lenguaje de marcas</li>
+            <li>Base de datos</li>
+        </ul>
+        <h3>Modulos de segundo curso <strong> Según la ley antigua LOE</strong></h3>
+        <img src="img/primero daw.png" alt="">
+        <ul>
+            <li>Despliegue de aplicaciones web</li>
+            <li>Diseño de interfaces web</li>
+            <li>Desarrollo entorno cliente</li>
+            <li>Desarrollo entorno servidor</li>
+            <li>Empresa e iniciativa emprendedora</li>
+        </ul>
+        <p class="info">Hace un año aproximadamente se modificó la ley por lo que algunos de estos modulos han sido
+            reemplazados y
+            han
+            aparecido nuevos modulos como por ejemplo:</p>
+        <div class="new-modules">
+            <h3>Los nuevos modulos son:</h3>
+            <div class="card">
+                <h4>Digitalización</h4>
+                <img src="img/digitalización.JPG" alt="logo digitalización">
+            </div>
+            <div class="card">
+                <h4>sostenibilidad</h4>
+                <img src="img/sostenibilidad.JPG" alt="">
+            </div>
+            <div class="card">
+                <h4>Módulo optativo</h4>
+                <img src="img/modulo optativo.JPG" alt="">
+            </div>
+            <div class="card">
+                <h4>Proyecto</h4>
+                <img src="img/Captura.JPG" alt="">
+            </div>
+        </div>
+    </section>
+    <script>
+        const cards = document.querySelectorAll('.new-modules .card');
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                cards.forEach(c => c.classList.remove('selected'));
+                card.classList.add('selected');
+            });
+        });
+        const listItems = document.querySelectorAll('ul li');
+
+        listItems.forEach(item => {
+            item.addEventListener('click', () => {
+                listItems.forEach(i => i.classList.remove('selected'));
+                item.classList.add('selected');
+            });
+        });
+    </script>
 </body>
 
 </html>
